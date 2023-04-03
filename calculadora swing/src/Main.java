@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,13 +12,16 @@ public class Main {
         label.setText("Calculadora swing");
         label.setBounds(160,10,1000,40);
         label.setFont(new Font("Trebuchet-MS",Font.BOLD,30));
+        label.setForeground(new Color (255, 255, 255));
         ImageIcon image = new ImageIcon("src/GNOME_Calculator_icon_2021.svg.png"); //Crear la imagen
         frame.setIconImage(image.getImage());
+        frame.getContentPane().setBackground( new Color(23, 11, 11));
 
         Label result = new Label();
         result.setText("Resultado: ");
         result.setFont(new Font("Trebuchet-MS",Font.BOLD,20));
         result.setBounds(225,400,1000,40);
+        result.setForeground(new Color(255, 255, 255));
         //Boton suma
        JTextField text=new JTextField();
         text.setBounds(150, 60, 300, 30);
@@ -27,6 +31,9 @@ public class Main {
         JButton button = new JButton();
         button.setBounds(150, 200, 100, 60);
         button.setText("+");
+        button.setBorder(new LineBorder(Color.CYAN));
+        button.setBorder(new LineBorder(Color.CYAN));
+        button.setBackground( Color.white);
         button.setFont(new Font("Arial",Font.BOLD,30));
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -48,6 +55,8 @@ public class Main {
         JButton resta = new JButton();
         resta.setBounds(350, 200, 100, 60);
         resta.setText("-");
+        resta.setBorder(new LineBorder(Color.CYAN));
+        resta.setBackground( Color.white);
         resta.setFont(new Font("Arial",Font.BOLD,30));
         resta.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -67,6 +76,9 @@ public class Main {
         JButton mult = new JButton();
         mult.setBounds(150, 300, 100, 60);
         mult.setText("*");
+
+        mult.setBackground( Color.white);
+        mult.setBorder(new LineBorder(Color.CYAN));
         mult.setFont(new Font("Arial",Font.BOLD,30));
         mult.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -86,6 +98,9 @@ public class Main {
         JButton dividir = new JButton();
         dividir.setBounds(350, 300, 100, 60);
         dividir.setText("/");
+
+        dividir.setBackground( Color.white);
+        dividir.setBorder(new LineBorder(Color.CYAN));
         dividir.setFont(new Font("Arial",Font.BOLD,30));
         dividir.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -106,7 +121,9 @@ public class Main {
         JButton info = new JButton();
         info.setBounds(0,500,100,60);
         info.setText("Informacion");
+        info.setBackground( Color.white);
         info.setFont(new Font("Arial",Font.BOLD,10));
+        info.setBorder(new LineBorder(Color.CYAN));
         info.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
